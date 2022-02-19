@@ -1,1 +1,278 @@
-<p>input-visitor-details works!</p>
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3 mt-4">
+          1.
+          <label for="formControlInput1" class="form-label"
+            >Full Name (*Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault01"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          2.
+          <label for="formControlInput2" class="form-label">Father's Name</label>
+          <input type="text" class="form-control" id="validationDefault02" />
+        </div>
+        <div class="mb-3">
+          3.
+          <label for="formControlInput3" class="form-label"
+            >Mother's Name (*Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault03"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          4.
+          <label for="formControlInput4" class="form-label"
+            >Husband's/Wife's Name</label
+          >
+          <input type="text" class="form-control" id="validationDefault04" />
+        </div>
+        <div class="mb-3">
+          5.
+          <label for="gender">Gender (*Required)</label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="male"> Male </label>
+        </div>
+        <div class="form-check mb-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="female"> Female </label>
+        </div>
+        <div class="mb-3">
+          6.
+          <label for="formControlInput6" class="form-label"
+            >Date of Birth (*Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault06"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          7.
+          <label for="formControlInput7" class="form-label"
+            >Place of Birth (*Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault07"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          8.
+          <label for="formControlInput8" class="form-label"
+            >Address (*Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault08"
+            required
+          />
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="mb-3 mt-2">
+          9.
+          <label for="formControlInput9" class="form-label">Region</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault09"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          10.
+          <label for="formControlInput10" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationDefault10" />
+        </div>
+        <div class="mb-3">
+          11.
+          <label for="formControlInput11" class="form-label"
+            >Phone Number (*Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault11"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          12.
+          <label for="formControlInput12" class="form-label"
+            >Religion (*Required)</label
+          >
+          <select
+            class="form-select"
+            id="validationDefault12"
+            aria-label="Default select example"
+          >
+            <option selected disabled value>Select Religion</option>
+            <option value="1">Islam</option>
+            <option value="2">Christian</option>
+            <option value="5">Confusius</option>
+            <option value="6">Protestan</option>
+            <option value="7">Buddha</option>
+            <option value="8">Hindu</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          13.
+          <label for="formControlInput13" class="form-label"
+            >Identity Card Number</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationDefault13"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          14.
+          <label for="formControlInput14" class="form-label">Guarantee</label>
+          <select
+            class="form-select"
+            id="validationDefault14"
+            aria-label="Default select example"
+          >
+            <option selected disabled value>Select Guarantee</option>
+            <option value="1">General Patient</option>
+            <option value="2">State Health Insurance Patient</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          15.
+          <label for="formControlInput15" class="form-label">Health Service</label>
+          <select
+            class="form-select"
+            id="validationDefault15"
+            aria-label="Default select example"
+          >
+            <option selected disabled value>Select Health Service</option>
+            <option value="1">General</option>    
+            <option value="6">ENT</option>
+            <option value="7">Dentist</option>
+          </select>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary mb-3"
+      type="submit"
+      style="width: 50px; height: 40px"
+    >
+      <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="title mb-3"><h5>Customer Biodata</h5></div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form">
+        <select class="form-select mb-3" aria-label="Default select example" placeholder="text">
+          <option selected>Salesman ID</option>
+          <option value="1">A123</option>
+          <option value="2">A124</option>
+          <option value="3">A125</option>
+        </select>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingCustomerName">Customer Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingPic">Pic</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingCity">City</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingRemark">Remark</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingNpwp">NPWP</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingCustomerPrice">Customer Price Category</label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingAddress">Address</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingAddress">Address ke 2</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingContact">Contact No</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingRegion">Region</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3"  placeholder="text">
+        <label for="floatingProvince">Province</label>
+      </div>
+      <div class="form-floating">
+        <input type="Number" class="form-control mb-3"  placeholder="">
+        <label for="floatingKuota">Kuota</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3" placeholder="text">
+        <label for="floatingExpedition">Prefered Expedition</label>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary mb-3"><i class="fa-solid fa-plus"></i></button>
+</div> -->

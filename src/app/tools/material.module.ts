@@ -48,6 +48,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const MY_FORMATS = {
 	parse: {
@@ -102,6 +103,7 @@ const MY_FORMATS = {
 		FlexLayoutModule,
 		MatDatepickerModule,
 		MatTreeModule,
+		MatFormFieldModule,
 	],
 	providers: [
 		// {provide: DateAdapter, useClass: MatMomentDateModule, deps: [MAT_DATE_LOCALE]},

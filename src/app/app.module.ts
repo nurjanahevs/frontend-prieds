@@ -9,6 +9,9 @@ import { MenuComponent } from './menu/menu.component';
 import { MaterialModule } from './tools/material.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { VisitorListComponent } from './visitor-list/visitor-list.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { VisitorListComponent } from './visitor-list/visitor-list.component';
     MenuComponent,
     InputVisitorDetailsComponent,
     RequestQueueNumberComponent,
-    VisitorListComponent
+    VisitorListComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
