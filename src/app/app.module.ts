@@ -11,7 +11,9 @@ import { APP_BASE_HREF } from '@angular/common';
 import { VisitorListComponent } from './visitor-list/visitor-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SidebarComponent } from './components/sidebar/sidebar.component'; 
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,16 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     RequestQueueNumberComponent,
     VisitorListComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

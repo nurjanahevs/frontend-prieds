@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validator } from '@angular/forms';
+import {MatCalendarCellClassFunction} from '@angular/material/datepicker';
+import { InputService } from '../../services/input.service';
 
 @Component({
   selector: 'app-input-visitor-details',
@@ -8,18 +10,17 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class InputVisitorDetailsComponent implements OnInit {
 
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    fathersname: new FormControl(''),
-    mothersname: new FormControl(''),
-    coupname: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
-    })
-  });
+    createFormPatient!: FormGroup;
+    createPatient: [] = []
+ 
+
+  dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
+    if (view === 'month') {
+      const date = cellDate.getDate();
+      return date === 1 || date === 20 ? 'input-visitor-details.component.html' : '';
+    }
+    return '';
+  };
 
   constructor() { }
 
