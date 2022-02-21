@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validator } from '@angular/forms';
-import {MatCalendarCellClassFunction} from '@angular/material/datepicker';
+import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { InputService } from '../../services/input.service';
 
 @Component({
@@ -10,8 +9,23 @@ import { InputService } from '../../services/input.service';
 })
 export class InputVisitorDetailsComponent implements OnInit {
 
-    createFormPatient!: FormGroup;
-    createPatient: [] = []
+  inputData = {
+    name:'',
+    fathersname:'',
+    mothersname:'',
+    huswifes:'',
+    gender:'',
+    birthdate:'',
+    birthplace:'',
+    address:'',
+    zip:'',
+    phone:'',
+    religion:'',
+    idcard:'',
+    guarantee:'',
+    healthservice:'',
+    datechoose:''
+  }
  
 
   dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
@@ -22,9 +36,13 @@ export class InputVisitorDetailsComponent implements OnInit {
     return '';
   };
 
-  constructor() { }
+  constructor(private inputService:InputService) { }
 
   ngOnInit(): void {
   }
+
+ 
+
+
 
 }

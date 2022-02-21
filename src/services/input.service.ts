@@ -6,11 +6,16 @@ import { environment } from '../environments/environment'
   providedIn: 'root',
 })
 export class InputService {
-  constructor(private http: HttpClient) {}
 
-  getData () {
+  constructor(private http: HttpClient ) {}
+
+  getData() {
     return this.http.get(`${environment.baseUrl}/api/patient`)
   }
+
+  // onSave() {
+  //   return this.http.post<any>(`${environment.baseUrl}/api/patient`)
+  // }
 
 
 }

@@ -6,10 +6,11 @@
       <div class="col-md-6">
         <div class="mb-3 mt-4">
           1.
-          <label for="formControlInput1" class="form-label"
+          <label for="name" class="form-label"
             >Full Name (*Required)</label
           >
           <input
+          [(ngModel)]="inputData.name"
             type="text"
             class="form-control"
             id="validationDefault01"
@@ -18,15 +19,18 @@
         </div>
         <div class="mb-3">
           2.
-          <label for="formControlInput2" class="form-label">Father's Name</label>
-          <input type="text" class="form-control" id="validationDefault02" />
+          <label for="fathersname" class="form-label">Father's Name</label>
+          <input 
+          [(ngModel)]="inputData.fathersname"
+          type="text" class="form-control" id="validationDefault02" />
         </div>
         <div class="mb-3">
           3.
-          <label for="formControlInput3" class="form-label"
+          <label for="mothersname" class="form-label"
             >Mother's Name (*Required)</label
           >
           <input
+          [(ngModel)]="inputData.mothersname"
             type="text"
             class="form-control"
             id="validationDefault03"
@@ -35,10 +39,12 @@
         </div>
         <div class="mb-3">
           4.
-          <label for="formControlInput4" class="form-label"
+          <label for="huswifes" class="form-label"
             >Husband's/Wife's Name</label
           >
-          <input type="text" class="form-control" id="validationDefault04" />
+          <input 
+          [(ngModel)]="inputData.huswifes"
+          type="text" class="form-control" id="validationDefault04" />
         </div>
         <div class="mb-3">
           5.
@@ -46,6 +52,7 @@
         </div>
         <div class="form-check">
           <input
+          [(ngModel)]="inputData.gender"
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
@@ -55,6 +62,7 @@
         </div>
         <div class="form-check mb-3">
           <input
+          [(ngModel)]="inputData.gender"
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
@@ -65,10 +73,11 @@
         </div>
         <div class="mb-3">
           6.
-          <label for="formControlInput6" class="form-label"
+          <label for="birthdate" class="form-label"
             >Date of Birth (*Required)</label
           >
           <input
+          [(ngModel)]="inputData.birthdate"
             type="text"
             class="form-control"
             id="validationDefault06"
@@ -77,10 +86,11 @@
         </div>
         <div class="mb-3">
           7.
-          <label for="formControlInput7" class="form-label"
+          <label for="birthplace" class="form-label"
             >Place of Birth (*Required)</label
           >
           <input
+          [(ngModel)]="inputData.birthplace"
             type="text"
             class="form-control"
             id="validationDefault07"
@@ -89,10 +99,11 @@
         </div>
         <div class="mb-3">
           8.
-          <label for="formControlInput8" class="form-label"
+          <label for="address" class="form-label"
             >Address (*Required)</label
           >
           <input
+          [(ngModel)]="inputData.address"
             type="text"
             class="form-control"
             id="validationDefault08"
@@ -103,8 +114,9 @@
       <div class="col-md-6">
         <div class="mb-3 mt-2">
           9.
-          <label for="formControlInput9" class="form-label">Region</label>
+          <label for="zip" class="form-label">Region</label>
           <input
+          [(ngModel)]="inputData.zip"
             type="text"
             class="form-control"
             id="validationDefault09"
@@ -118,10 +130,11 @@
         </div>
         <div class="mb-3">
           11.
-          <label for="formControlInput11" class="form-label"
+          <label for="phone" class="form-label"
             >Phone Number (*Required)</label
           >
           <input
+          [(ngModel)]="inputData.phone"
             type="text"
             class="form-control"
             id="validationDefault11"
@@ -130,10 +143,11 @@
         </div>
         <div class="mb-3">
           12.
-          <label for="formControlInput12" class="form-label"
+          <label for="religion" class="form-label"
             >Religion (*Required)</label
           >
           <select
+          [(ngModel)]="inputData.religion"
             class="form-select"
             id="validationDefault12"
             aria-label="Default select example"
@@ -149,10 +163,11 @@
         </div>
         <div class="mb-3">
           13.
-          <label for="formControlInput13" class="form-label"
+          <label for="idcard" class="form-label"
             >Identity Card Number</label
           >
           <input
+          [(ngModel)]="inputData.idcard"
             type="text"
             class="form-control"
             id="validationDefault13"
@@ -161,8 +176,9 @@
         </div>
         <div class="mb-3">
           14.
-          <label for="formControlInput14" class="form-label">Guarantee</label>
+          <label for="guarantee" class="form-label">Guarantee</label>
           <select
+          [(ngModel)]="inputData.guarantee"
             class="form-select"
             id="validationDefault14"
             aria-label="Default select example"
@@ -174,21 +190,22 @@
         </div>
         <div class="mb-3">
           15.
-          <label for="formControlInput15" class="form-label">Health Service</label>
+          <label for="healthservice" class="form-label">Health Service</label>
           <select
+          [(ngModel)]="inputData.healthservice"
             class="form-select"
             id="validationDefault15"
             aria-label="Default select example"
           >
             <option selected disabled value>Select Health Service</option>
             <option value="1">General</option>    
-            <option value="6">ENT</option>
-            <option value="7">Dentist</option>
+            <option value="2">ENT</option>
+            <option value="3">Dentist</option>
           </select>
         </div>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker">
+          <input [(ngModel)]="inputData.datechoose" matInput [matDatepicker]="picker">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
         </mat-form-field>
